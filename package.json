@@ -1,0 +1,21 @@
+{
+  "name": "yolol-remastered",
+  "version": "1.0.0",
+  "description": "A langauge based on the one used in the MMO Starbase. This project aims to make it a fully viable language!",
+  "main": "index.js",
+  "scripts": {
+    "watch": "concurrently --kill-others \"tsc -w\" \"tsc-alias -w\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "tsc-alias": "^1.8.3",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@types/node": "^18.15.3"
+  },
+  "type": "module"
+}
