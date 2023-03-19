@@ -1,4 +1,4 @@
-import {TokenType, operators, binaryOperators, reservedKeywords, numeric, validOperationTypes, } from '@core/lib/utilities'
+import {TokenType, operators, binaryOperators, reservedKeywords, validOperationTypes, } from '@core/lib/utilities'
 import {Token} from "@core/lib/Token"
 
 export class Lexer {
@@ -173,11 +173,7 @@ export class Lexer {
         while(this.isDigit(this.lookAhead(),true)) {
             text += this.advance();
         }
-        if(text.includes('.')) {
-            this.createToken(TokenType.FLOAT, parseFloat(text));
-        } else {
-            this.createToken(TokenType.INTEGER, parseInt(text));
-        }
+        this.createToken(TokenType.NUMBER, parseFloat(text));
 
     }
 

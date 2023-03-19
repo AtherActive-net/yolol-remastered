@@ -28,21 +28,17 @@ export enum TokenType {
     AND = "&&",
 
     STRING = "str",
-    INTEGER = "int",
-    FLOAT = "flt",
+    NUMBER = "number",
     BOOLEAN = "bool",
 
     STRING_TYPE = "STR",
-    INTEGER_TYPE = "INT",
-    FLOAT_TYPE = "FLT",
+    NUMBER_TYPE = "NUMBER",
     BOOLEAN_TYPE = "BOOl",
 
     IDENTIFIER = "IDENTIFIER",
     RETURN = "RETURN",
     
-    CLASS = "CLASS",
     FUNCTION = 'FUNCTION',
-    NEW = 'NEW',
 
     ELSE = "else",
     FALSE = "false",
@@ -68,14 +64,14 @@ export enum TokenType {
     SCRIPT = "script"
 }
 
-export const validOperationTypes = [
-    TokenType.INTEGER,
-    TokenType.FLOAT,
+export const types = [
+    TokenType.STRING_TYPE,
+    TokenType.NUMBER_TYPE,
+    TokenType.BOOLEAN,
 ]
 
-export const numeric = [
-    TokenType.INTEGER,
-    TokenType.FLOAT
+export const validOperationTypes = [
+    TokenType.NUMBER
 ]
 
 export const operators = [
@@ -113,10 +109,9 @@ export const reservedKeywords = new Map([
     ['then', TokenType.THEN],
 
     // Variable type keywords
-    ['int', TokenType.INTEGER_TYPE],
-    ['flt', TokenType.FLOAT_TYPE],
-    ['str', TokenType.STRING_TYPE],
-    ['bool', TokenType.BOOLEAN_TYPE],
+    ['number', TokenType.NUMBER_TYPE],
+    ['string', TokenType.STRING_TYPE],
+    ['boolean', TokenType.BOOLEAN_TYPE],
 
     ['true', TokenType.TRUE],
     ['false', TokenType.FALSE],
